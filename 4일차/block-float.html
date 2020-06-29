@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    
+<style>
+    .f_01{
+        border:1px solid #f00;
+        
+    /*    height: 60px*/    
+    /*overflow:hidden;*/
+    }
+    .f_01 p{
+        float:left;
+    }
+    .f_cancel{clear: left;}
+    
+    .f_01:after{
+        content: ''; /*인라인요소*/
+        clear: both;
+        display: block;
+    }
+
+</style>
+
+<div class="f_01">
+   <p>left</p>
+   <p>right</p>
+   <!--<div> </div>--> <!--여기깡통쓰지말구 css로 가상의 태그를 만듷옿라 after-->
+</div>
+   
+   
+<style>
+    .f_02{
+        width: 1000px;
+        margin:100px auto;
+        
+    }
+    .f_02:after{
+        content: ''; /*인라인요소*/
+        clear: both;
+        display: block;
+    }
+    .f_02 p{
+        width: 45%; height:300px;
+        background:#ddd;
+        overflow: hidden;
+    }
+    .f_02 p:nth-of-type(1){float:left;}
+    .f_02 p:nth-of-type(2){float:right;}
+    .f_02 p img {width: 100px;}
+</style>
+
+
+<div class="f_02">
+    <p> <img src="../img/bear.gif"> </p>
+    <p> </p>
+    </div>         
+
+    
+    
+    
+    
+</body>
+</html>
